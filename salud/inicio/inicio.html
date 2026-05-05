@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Vital | Seguimiento de descenso de peso</title>
+  <meta name="description" content="Landing page personalizable para seguimiento de salud, descenso de peso, consultas médicas y registro de avances.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <div class="container nav-container">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">
+          <img src="file:///C:/Users/maria/.trae/attachments/72342fcd-349a-484f-84d3-767bd54e793f_b60598b3-d957-4fca-9104-17b989835eba_60513b0f00ffa23f7565c08b3dad56ea.jpg" alt="Logo del proyecto">
+        </span>
+        <span>Control Vital</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#objetivo">Objetivo</a>
+        <a href="#consultas">Consultas</a>
+        <a href="#dietas">Dietas</a>
+        <a href="#peso">Peso</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="header-actions" id="headerActions">
+    <span id="userBadge" class="user-badge" aria-live="polite"></span>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar modo visual">
+      <span id="themeIcon" aria-hidden="true">☀️</span>
+    </button>
+    <button id="logoutButton" class="button secondary small" type="button">Cerrar sesión</button>
+  </div>
+
+  <main>
+    <section class="hero" id="objetivo">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Seguimiento de salud y bienestar</p>
+          <h1>Una landing page personalizable para acompañar el tratamiento de descenso de peso</h1>
+          <p class="hero-copy">
+            Organizá tus consultas médicas, planificá tus comidas, registrá el peso y mantené contacto con tu equipo de seguimiento
+            en un entorno simple, claro y funcional.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#peso">Registrar progreso</a>
+            <a class="button secondary" href="#consultas">Ver seguimiento</a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Beneficios principales">
+            <li>Visualización clara del progreso semanal</li>
+            <li>Seguimiento de consultas y hábitos</li>
+            <li>Diseño adaptable y fácil de personalizar</li>
+          </ul>
+        </div>
+
+        <aside class="summary-card" aria-label="Resumen del tratamiento">
+          <p class="summary-label">Estado actual</p>
+          <h2>Plan activo de seguimiento</h2>
+          <div class="summary-metrics">
+            <article>
+              <strong>12</strong>
+              <span>Semanas sugeridas</span>
+            </article>
+            <article>
+              <strong>3</strong>
+              <span>Hábitos clave</span>
+            </article>
+            <article>
+              <strong>100%</strong>
+              <span>Editable</span>
+            </article>
+          </div>
+          <p class="summary-note">Podés reemplazar textos, colores, objetivos y secciones según tu proyecto o profesional de salud.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="content-section" id="consultas">
+      <div class="container section-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Consultas médicas</p>
+              <h2>Agenda y seguimiento</h2>
+            </div>
+            <span class="badge">Editable</span>
+          </div>
+
+          <form id="consultaForm" class="inline-form">
+            <input type="text" id="consultaInput" placeholder="Ej: Control con nutricionista - 12/05" required>
+            <button type="submit" class="button primary small">Agregar consulta</button>
+          </form>
+
+          <ul id="consultaList" class="feature-list">
+            <li>Evaluación clínica inicial</li>
+            <li>Seguimiento nutricional mensual</li>
+            <li>Control de laboratorio y hábitos</li>
+          </ul>
+        </article>
+
+        <article class="panel" id="dietas">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Dietas y planificación</p>
+              <h2>Opciones de alimentación</h2>
+            </div>
+            <span class="badge">Flexible</span>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Plan</th>
+                  <th>Objetivo</th>
+                  <th>Frecuencia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hipocalórico equilibrado</td>
+                  <td>Reducción gradual de peso</td>
+                  <td>Diaria</td>
+                </tr>
+                <tr>
+                  <td>Alto en proteínas</td>
+                  <td>Mejorar saciedad</td>
+                  <td>5 comidas</td>
+                </tr>
+                <tr>
+                  <td>Plan mediterráneo</td>
+                  <td>Hábitos sostenibles</td>
+                  <td>Semanal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="diet-notes">
+            <p>Podés reemplazar esta tabla por una lista de comidas, un cronograma semanal o recomendaciones médicas específicas.</p>
+          </div>
+
+          <div class="diet-manager">
+            <div class="diet-manager-header">
+              <h3>Registro de planes de alimentación</h3>
+              <p>Guardá un plan escrito, adjuntá un PDF o usá ambas opciones para llevar historial.</p>
+            </div>
+
+            <form id="dietForm" class="diet-form">
+              <div class="form-row">
+                <label for="planTitle">Título del plan</label>
+                <input type="text" id="planTitle" placeholder="Ej: Plan semana 1" required>
+              </div>
+
+              <div class="form-row">
+                <label for="planText">Descripción o plan escrito</label>
+                <textarea id="planText" rows="5" placeholder="Escribí acá el plan de alimentación, indicaciones o menú semanal..."></textarea>
+              </div>
+
+              <div class="form-row">
+                <label for="planPdf">Adjuntar PDF del plan</label>
+                <input type="file" id="planPdf" accept="application/pdf">
+              </div>
+
+              <button type="submit" class="button primary">Guardar plan</button>
+              <p id="dietMessage" class="form-message" aria-live="polite"></p>
+            </form>
+
+            <div class="diet-history">
+              <h3>Historial guardado</h3>
+              <div id="dietList" class="diet-records"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section alt-section" id="peso">
+      <div class="container section-grid">
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Registro de peso</p>
+              <h2>Cargá nuevos avances</h2>
+            </div>
+            <span class="badge">Dinámico</span>
+          </div>
+
+          <form id="pesoForm" class="weight-form">
+            <label for="pesoInput">Ingresá tu peso actual en kg</label>
+            <div class="weight-input-group">
+              <input type="number" id="pesoInput" min="20" max="400" step="0.1" placeholder="Ej: 84.5" required>
+              <button type="submit" class="button primary small">Guardar peso</button>
+            </div>
+          </form>
+
+          <div class="weight-history">
+            <h3>Historial reciente</h3>
+            <ul id="pesoList" class="weight-list"></ul>
+          </div>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Visualización</p>
+              <h2>Gráfico de evolución</h2>
+            </div>
+            <span class="badge">Canvas</span>
+          </div>
+
+          <canvas id="pesoChart" width="520" height="280" aria-label="Gráfico de evolución del peso"></canvas>
+          <p class="chart-help">Cada nuevo registro se agrega automáticamente al gráfico para mostrar la tendencia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div class="container contact-card">
+        <div>
+          <p class="panel-kicker">Contacto</p>
+          <h2>Solicitá información o agendá una consulta</h2>
+          <p class="contact-copy">
+            Usá este formulario para recibir una propuesta, consultar disponibilidad o adaptar la landing page a un tratamiento específico.
+          </p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="nombreContacto">Nombre</label>
+            <input type="text" id="nombreContacto" placeholder="Tu nombre" required>
+          </div>
+
+          <div class="form-row">
+            <label for="emailContacto">Correo electrónico</label>
+            <input type="email" id="emailContacto" placeholder="tuemail@dominio.com" required>
+          </div>
+
+          <div class="form-row">
+            <label for="mensajeContacto">Mensaje</label>
+            <textarea id="mensajeContacto" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
+          </div>
+
+          <button type="submit" class="button primary">Enviar consulta</button>
+          <p id="contactMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Control Vital. Landing page personalizable para proyectos de seguimiento de salud.</p>
+      <p>Desarrollado con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #010409;
+  background-image:
+    radial-gradient(at 0% 0%, #020617 0, transparent 50%),
+    radial-gradient(at 50% 100%, #112244 0, transparent 50%),
+    radial-gradient(at 100% 0%, #010409 0, transparent 50%);
+  background-size: 200% 200%;
+  animation: movimientoLiquido 15s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes movimientoLiquido {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: rgba(11, 18, 32, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 600px;
+  border: 1px solid rgba(16, 64, 160, 0.6);
+  box-shadow: 0 0 25px rgba(16, 64, 160, 0.3);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { margin-bottom: 10px; }
+p { color: #9ca3af; margin-bottom: 20px; }
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+label {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #111827;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #1040a0;
+  box-shadow: 0 0 10px rgba(16, 64, 160, 0.5);
+}
+
+.submit {
+  grid-column: span 2;
+  width: 100%;
+  padding: 12px;
+  background: #1040a0;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.3s;
+  font-size: 15px;
+  box-shadow: 0 0 15px rgba(16, 64, 160, 0.4);
+}
+
+.submit:hover {
+  background: #083080;
+  box-shadow: 0 0 20px rgba(16, 64, 160, 0.6);
+}
+
+.link {
+  grid-column: span 2;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #4da3ff;
+  cursor: pointer;
+}
+
+.water-drop-alert {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  background: rgba(16, 64, 160, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: 1px solid #4da3ff;
+  box-shadow: 0 0 25px rgba(77, 163, 255, 0.5);
+  color: white;
+  text-align: center;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: entradaGota 0.4s ease-out;
+}
+
+@keyframes entradaGota {
+  from { opacity: 0; top: -50px; }
+  to { opacity: 1; top: 30px; }
+}
+
+.water-drop-alert button {
+  margin-top: 15px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+  color: #1040a0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
