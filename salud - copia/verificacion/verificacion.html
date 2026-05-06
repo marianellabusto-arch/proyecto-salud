@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificación</title>
+  <link rel="stylesheet" href="verificacion.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Verificación</h1>
+    <p>Ingresá el código que recibiste</p>
+
+    <form id="verifForm">
+      <div class="codigo code-container">
+        <input type="text" maxlength="1" class="code" inputmode="numeric">
+        <input type="text" maxlength="1" class="code" inputmode="numeric">
+        <input type="text" maxlength="1" class="code" inputmode="numeric">
+        <input type="text" maxlength="1" class="code" inputmode="numeric">
+      </div>
+
+      <button type="submit" class="submit">Verificar</button>
+    </form>
+
+    <p class="link" onclick="reenviarCodigo()">Reenviar código</p>
+    <p class="link" onclick="cancelarRegistro()" style="font-size: 12px; margin-top: 15px; cursor: pointer;">Cancelar registro</p>
+  </div>
+
+  <div id="customAlert" class="water-drop-alert hidden">
+    <span id="alertMessage"></span>
+    <button onclick="cerrarAlerta()">Entendido</button>
+  </div>
+
+  <script src="verificacion.js"></script>
+</body>
+</html>

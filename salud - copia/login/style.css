@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #010409;
+  background-image:
+    radial-gradient(at 0% 0%, #020617 0, transparent 55%),
+    radial-gradient(at 50% 0%, #001f3f 0, transparent 50%),
+    radial-gradient(at 100% 0%, #020617 0, transparent 55%),
+    radial-gradient(at 0% 100%, #082f49 0, transparent 50%),
+    radial-gradient(at 50% 100%, #1e3a8a 0, transparent 50%),
+    radial-gradient(at 100% 100%, #020617 0, transparent 55%);
+  background-size: 200% 200%;
+  animation: movimientoLiquido 18s ease infinite;
+}
+
+@keyframes movimientoLiquido {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 40px;
+  border-radius: 32px;
+  width: 350px;
+  text-align: center;
+  z-index: 10;
+  color: white;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #00e5ff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #00c8ff, #00e5ff);
+  border: none;
+  border-radius: 12px;
+  color: #010409;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.5);
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
+}
+
+.link {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #00e5ff;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+}
+
+.water-drop-alert {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  background: #0d3595;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(77, 163, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.water-drop-alert button {
+  background: white;
+  color: #0d3595;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
